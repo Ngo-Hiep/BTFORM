@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let char;
+    do {
+      char = prompt("Nhập một ký tự:");
+      if (!isNaN(char) && char.trim() !== "") {
+        document.write("True - Đây là một số.");
+        break;
+      } else {
+        alert("Không phải số, hãy nhập lại.");
+      }
+    } while (true);
+    </script>
+</body>
+</html>
