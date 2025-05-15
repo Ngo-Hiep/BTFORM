@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="zone3">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Nhập tài khoản">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Nhập mật khẩu">
+        </div>
+        <button onclick="getData()">Đăng ký</button>
+    </div>
+
+    <script>
+        const getData = () => {
+            let els = document.querySelectorAll("#zone3 input");
+            let username = els[0].value.trim();
+            let password = els[1].value.trim();
+
+            if (username === "" || password === "") {
+                alert("Vui lòng nhập đầy đủ tài khoản và mật khẩu!");
+            } else {
+                alert("Đăng ký thành công!\nTài khoản: " + username + "\nMật khẩu: " + password);
+            }
+        }
+    </script>
+</body>
+</html>

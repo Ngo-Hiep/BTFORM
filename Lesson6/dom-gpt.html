@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 50px;
+            padding: 1rem;
+        }
+        div{
+            margin: 1rem;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>Giải phương trình bậc 2: aX<sup>2</sup>+b.x+c =0</h1>
+    <div>
+        <div>
+            <label for="hesoA">Nhập hệ số a</label>
+            <input type="text" id="hesoA">
+        </div>
+    </div>
+    <div>
+        <label for="hesoB">Nhập hệ số b</label>
+        <input type="text" id="hesoB">
+    </div>
+    <div>
+        <label for="hesoC">Nhập hệ số C</label>
+        <input type="text" id="hesoC">
+    </div>
+    <button onclick="thucHien();">Thực hiện</button>
+    <div id="ketqua">Kết quả</div>
+    </div>
+    <script>
+        const thucHien = ()=>{
+            let hsA = document.getElementById("heSoA").value;
+            let hsB = document.getElementById("heSoB").value;
+            let hsC = document.getElementById("heSoC").value;
+            hsA = parseFloat(hsA);
+            hsB = parseFloat(hsB);
+            hsC = parseFloat(hsC);
+        }
+    </script>
+</body>
+</html>

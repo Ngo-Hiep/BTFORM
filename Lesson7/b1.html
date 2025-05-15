@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <title>Bài thực hành 02 - Chọn màu chữ</title>
+    <style>
+        .box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 300px;
+        }
+        .color-button {
+            margin: 5px;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            background-color: white;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>Chọn màu chữ</h3>
+        <button class="color-button" onclick="changeColor('red')">Đỏ</button>
+        <button class="color-button" onclick="changeColor('blue')">Xanh</button>
+        <button class="color-button" onclick="changeColor('orange')">Vàng</button>
+        <button class="color-button" onclick="changeColor('gray')">Ghi</button>
+        <button class="color-button" onclick="changeColor('purple')">Tím</button>
+
+        <p id="text" style="margin-top: 20px;">Lập trình web với PHP</p>
+    </div>
+
+    <script>
+        function changeColor(color) {
+            document.getElementById("text").style.color = color;
+        }
+    </script>
+</body>
+</html>

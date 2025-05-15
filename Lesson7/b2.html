@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Bài thực hành 04 - Tab content</title>
+    <style>
+        .tab-container {
+            margin: 20px;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            border: 1px solid gray;
+            background-color: lightgray;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .tab-button.active {
+            background-color: purple;
+            color: white;
+        }
+
+        .tab-content {
+            border: 1px solid gray;
+            padding: 15px;
+            margin-top: -1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab-container">
+        <div id="tabs">
+            <div class="tab-button active" onclick="changeTab('html')">HTML</div>
+            <div class="tab-button" onclick="changeTab('css')">CSS</div>
+            <div class="tab-button" onclick="changeTab('jquery')">Jquery</div>
+            <div class="tab-button" onclick="changeTab('php')">PHP</div>
+        </div>
+        <div id="content" class="tab-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ipsa aliquid sit quidem error iusto officia at sint, dolorum maiores, vel expedita harum porro explicabo dolor aliquam, labore facilis magnam.
+        </div>
+    </div>
+
+    <script>
+        const contents = {
+            html: "Nội dung HTML: HTML là ngôn ngữ đánh dấu siêu văn bản dùng để xây dựng cấu trúc trang web.",
+            css: "Nội dung CSS: CSS dùng để tạo kiểu dáng và định dạng cho các phần tử HTML.",
+            jquery: "Nội dung Jquery: jQuery là thư viện JavaScript giúp đơn giản hóa việc tương tác DOM.",
+            php: "Nội dung PHP: PHP là ngôn ngữ phía server được sử dụng để xử lý logic và truy vấn CSDL."
+        };
+
+        function changeTab(tabName) {
+            document.getElementById("content").innerText = contents[tabName];
+            let tabs = document.querySelectorAll(".tab-button");
+            tabs.forEach(tab => tab.classList.remove("active"));
+
+            event.target.classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
